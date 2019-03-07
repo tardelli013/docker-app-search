@@ -31,7 +31,7 @@ services:
     volumes:
       - ./esdata1/db:/elasticsearch/db
     ports:
-      - 9300:9300
+      - "9300:9300"
 
   app:
     restart: always
@@ -41,7 +41,7 @@ services:
       - ./app:/app
       - ~/.m2:/root/.m2
     expose:
-      - 8080
+      - "8080"
     command: mvn clean spring-boot:run
     depends_on:
       - elasticsearch
