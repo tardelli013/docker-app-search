@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   nginx:
    container_name: some-nginx
    image: nginx:1.13
@@ -11,6 +12,7 @@ services:
    - ./nginx/conf.d:/etc/nginx/conf.d
    depends_on:
    - app
+   - elasticsearch
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
