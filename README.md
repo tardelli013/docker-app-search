@@ -17,7 +17,7 @@
 ## Run
 - É necessário copiar o arquivo users.csv para `app/src/main/resources/database` este arquivo .csv será carregado no ElasticSearch em background
 - O arquivo possui cerca de 600 MB e pode ser baixado [aqui](https://drive.google.com/file/d/1fp7EUL0uVtnHmPUvPjFIUEZfvivwJKlJ/view?usp=sharing)
-- Enquando este arquivo é carregado a API já pode ser utilizada porém não com a totalidade dos registros, em testes em uma máquina com Ubuntu, 8GB ram e Processador I5 a carga completa demorou 10 horas.
+- Ao iniciar a aplicação, em background este arquivo é carregado e a API já pode ser utilizada porém não com a totalidade dos registros, em testes em uma máquina com Ubuntu, 8GB ram e Processador I5 a carga completa demorou 10 horas.
 
 - Para rodar o ElasticSearch é necessário alterar o max_map_count no linux: `sudo sysctl -w vm.max_map_count=262144`
 
